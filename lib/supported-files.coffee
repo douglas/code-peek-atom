@@ -114,6 +114,10 @@ class SupportedFiles
 
     'Python':
       regExp: ///
+        # matches 'class REPLACE('
+        class \s+ REPLACE \s*
+        # or
+          |
         # matches 'def REPLACE('
         def \s+ REPLACE \s* \(
       ///
