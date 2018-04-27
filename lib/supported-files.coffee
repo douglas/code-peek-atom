@@ -125,12 +125,14 @@ class SupportedFiles
 
     'Ruby':
       regExp: ///
+        # matches 'class'
+        class \s+ REPLACE \s*
+        # or
+          |
         # matches 'def'
         def \s+
-
         # optionally matches 'self.'
         (self\.)?
-
         # match REPLACE
         REPLACE
       ///
